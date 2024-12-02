@@ -10,9 +10,10 @@
 - Utilize ```ProstaNet\Data_processing\json2graph.py``` to convert the JSON files to their corresponding protein graph.
 
 ## Train ProstaNet model
-- Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Datasets\Single_training.npy```, for multiple-mutation is ```Datasets\Multiple_training_cluster.npy```.
+- Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Datasets\Single_training.npy```, for multiple-mutations is ```Datasets\Multiple_training_cluster.npy```.
 
   You can use your own training set and modify the parameters in the model.
 
 ## Test ProstaNet model
-- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is 
+- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is ```Datasets\Ssym_testing.npy``` and ```Datasets\Extra_testing.npy```, for multiple-mutations is ```Datasets\Multiple_testing_cluster.npy```.
+
