@@ -138,7 +138,7 @@ class json2graph():
             for i in data:
                 name = i['name']
                 print(name)
-                pdb = os.path.join('../LTJ_features/Extra_alpha_mutated', f"{name}.pdb")
+                pdb = os.path.join('../../Data_example/raw', f"{name}.pdb")
                 pssm_file = os.path.join('/home/til60/Desktop/Blast/blast_result', f"{name}.pssm")
                 with torch.no_grad():
                     coords = torch.as_tensor(i['coord'],device="cpu", dtype=torch.float32)
@@ -281,6 +281,6 @@ class json2graph():
     
 if __name__ == '__main__':
 
-    datalist = '../LTJ_features/json_path/structures_listv4.json'
-    json_graphs = json2graph('../LTJ_features')
+    datalist = '../../Data_example/json_path/structures_list.json'
+    json_graphs = json2graph('../../Data_example')
     json_graphs.process(datalist)
