@@ -9,11 +9,16 @@
   For detailed instructions on the BLAST search process, refer to the PSI-BLAST section.
 - Utilize ```ProstaNet\Data_processing\json2graph.py``` to convert the JSON files to their corresponding protein graph.
 
+## Use model to make prediction
+- Convert the proteins you want to predict by following the data processing section.
+- Generate a data list. The format of single-point mutations list should follow ```Single_training.npy```, multiple-point mutations list follows ```Multiple_training_cluster.npy```.
+- Run 
+
 ## Train ProstaNet model
-- Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Datasets\Single_training.npy```, for multiple-mutations is ```Datasets\Multiple_training_cluster.npy```.
+- Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Single_training.npy```, for multiple-mutations is ```Multiple_training_cluster.npy```.
 
   You can use your own training set and modify the parameters in the model.
 
 ## Test ProstaNet model
-- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is ```Datasets\Ssym_testing.npy``` and ```Datasets\Extra_testing.npy```, for multiple-mutations is ```Datasets\Multiple_testing_cluster.npy```.
+- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is ```Ssym_testing.npy``` and ```Extra_testing.npy```, for multiple-mutations is ```Multiple_testing_cluster.npy```.
 
