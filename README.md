@@ -6,7 +6,7 @@ conda env create --file environment.yml
 ```
 
 ## ProstaNet data processing
-- To generate proteins' variants, use Rosetta relax. For more detailed steps see the Rosetta section.
+- To generate proteins' variants, use Rosetta code. The wild-type proteins need to be relaxed. For more detailed steps see the Rosetta section.
 - Use ```ProstaNet\Data_processing\prot2json.py``` to generate a JSON file for the data input to the model. The ```prot2json.py``` script will produce FASTA files for all the proteins. These FASTA files can be used as input to generate the PSSM features.
 
   Note: Performing the PSI-BLAST search may take a long time. However, our results show that omitting the PSSM features does not significantly affect the outcome. Therefore, if you do not wish to wait for the BLAST search to complete, you may skip this step.
