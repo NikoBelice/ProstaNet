@@ -11,7 +11,7 @@ from torch_geometric.data import DataLoader
 processed_dir = "../../LTJ_features/processed_GVP4/"
 
 #Testing data list, you can change the data list you want to use
-npy_file = "../../LTJ_Test_features/Ssym_direct.npy"
+npy_file = "../../Datasets/Ssym_testing.npy"
 
 #Direct mutation data
 class dir_Dataset(Dataset_n):
