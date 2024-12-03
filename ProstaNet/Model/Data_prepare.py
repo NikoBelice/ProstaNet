@@ -12,7 +12,7 @@ from sklearn.model_selection import KFold
 processed_dir = "../../LTJ_features/processed_GVP4/"
 
 #Training data list/You can change it to your own training set
-npy_file = "../../LTJ_features/n_multiple_directv2.npy"
+npy_file = "../../Datasets/Single_training.npy"
 
 #Direct mutation data
 class dir_Dataset(Dataset_n):
