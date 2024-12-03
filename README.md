@@ -1,5 +1,10 @@
 # ProstaNet
 
+## Install python dependencies
+```
+conda env create --file environment.yml
+```
+
 ## ProstaNet data processing
 - To generate proteins' variants, use Rosetta relax. For more detailed steps see the Rosetta section.
 - Use ```ProstaNet\Data_processing\prot2json.py``` to generate a JSON file for the data input to the model. The ```prot2json.py``` script will produce FASTA files for all the proteins. These FASTA files can be used as input to generate the PSSM features.
@@ -9,10 +14,10 @@
   For detailed instructions on the BLAST search process, refer to the PSI-BLAST section.
 - Utilize ```ProstaNet\Data_processing\json2graph.py``` to convert the JSON files to their corresponding protein graph.
 
-## Use model to make prediction
+## Use the model to make prediction
 - Convert the proteins you want to predict by following the data processing section.
-- Generate a data list. The format of single-point mutations list should follow ```Single_training.npy```, multiple-point mutations list follows ```Multiple_training_cluster.npy```.
-- Run 
+- Generate a data list. The format of the single-point mutations list should follow ```Single_training.npy```, multiple-point mutations list follows ```Multiple_training_cluster.npy```.
+- Run ```ProstaNet\Model\Predict.py```.
 
 ## Train ProstaNet model
 - Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Single_training.npy```, for multiple-mutations is ```Multiple_training_cluster.npy```.
@@ -21,4 +26,11 @@
 
 ## Test ProstaNet model
 - Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is ```Ssym_testing.npy``` and ```Extra_testing.npy```, for multiple-mutations is ```Multiple_testing_cluster.npy```.
+
+## Protein relax and mutate
+- Use the Rosetta command in ```ProstaNet\Data_processing\rosetta_mutate.py``` and ```rosetta_mutate_multiple.py``` to generate protein variants. Wild-type protein uses ```rosetta_relax.py``` to relax.
+
+## PSI-BLAST
+- Download UniRef90 database from https://www.uniprot.org/help/downloads
+- Run ```ProstaNet\Data_processing\psiblast.py```
 
