@@ -35,3 +35,9 @@ conda env create --file environment.yml
 - Download UniRef90 database from https://www.uniprot.org/help/downloads
 - Run ```ProstaNet\Data_processing\psiblast.py```
 
+Database available:
+FireProtDB: https://loschmidt.chemi.muni.cz/fireprotdb/
+ThermoMutDB: https://biosig.lab.uq.edu.au/thermomutdb/
+ProThermDB: https://web.iitm.ac.in/bioinfo2/prothermdb/
+MPTherm: https://www.iitm.ac.in/bioinfo/mptherm/
+S2648: https://protddg-bench.github.io/s2648/
