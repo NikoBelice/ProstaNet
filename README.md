@@ -19,8 +19,9 @@ conda env create --file environment.yml
 - Generate a data list. The format of the single-point mutations list should follow ```Single_training.npy```, multiple-point mutations list follows ```Multiple_training_cluster.npy```.
 - Run ```ProstaNet\Model\Predict.py```.
 
-## Train ProstaNet model
+## Train/fine-tune ProstaNet model
 - Run ```ProstaNet\Model\Train_GVP.py``` to train the model. The default training set for single-point mutations is ```Single_training.npy```, for multiple-mutations is ```Multiple_training_cluster.npy```.
+- For fine-tune pre-trained model, run ```ProstaNet\Model\Train_GVP_finetune.py```
 
   You can use your own training set and modify the parameters in the model.
 
