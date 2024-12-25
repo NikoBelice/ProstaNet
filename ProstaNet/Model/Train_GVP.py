@@ -126,7 +126,7 @@ for fold, (train_indices, val_indices) in enumerate(kfold.split(dir_dataset)):
     if(val_loss < best_loss):
       best_loss = val_loss
       best_loss_epoch = epoch
-      torch.save(model.state_dict(), f"../../LTJ_features/tem/GVPs8{k}.pth") #path to save the model
+      torch.save(model.state_dict(), f"../../GVPs1{k}.pth") #path to save the model
       print("Model")
       
     if(val_loss < min_loss):
