@@ -15,13 +15,13 @@ d1 = datetime.datetime.now()
 use_multiprocessing = True
 if use_multiprocessing:
     import multiprocessing
-    max_cpus = 40
+    max_cpus = 8
 
 #Using Rosetta relax to perform single-point mutation
 def wild_mutate(start_struct, pdb_chain, variant_resfile, variant):
     rosetta_relax_script_path = os.path.expanduser('./relax.mpi.linuxgccrelease')
-    output_directory = os.path.expanduser('./Extra_alpha_mutated')
-    input_pdb_path = os.path.expanduser('./Ssym_alpha')
+    output_directory = os.path.expanduser('../../Data_example/mutant')
+    input_pdb_path = os.path.expanduser('../../Data_example/raw')
     start_struct_path = os.path.join(input_pdb_path, start_struct)
 
 #The parameters of Rosetta single-point mutation   
@@ -53,10 +53,10 @@ def wild_mutate(start_struct, pdb_chain, variant_resfile, variant):
 if __name__=='__main__':
 
     case = []
-    base_path = os.path.expanduser('/home/til60/rosetta_src_2021.16.61629_bundle/main/source/bin/TRY/Relax')
-    input_pdb_path = os.path.expanduser('%s/Ssym_alpha' %base_path)
-    output_directory = os.path.expanduser('%s/Extra_alpha_mutated' %base_path)
-    variant_list = os.path.expanduser('%s/Variant_list.txt' %output_directory)
+    base_path = os.path.expanduser('../../Data_example')
+    input_pdb_path = os.path.expanduser('%s/raw' %base_path)
+    output_directory = os.path.expanduser('%s/mutant' %base_path)
+    variant_list = os.path.expanduser('%s/mutant/Single_list.txt' %output_directory)
 
     variants = []
     os.chdir(output_directory)
