@@ -7,9 +7,9 @@ from torch.utils.data import Dataset as Dataset_n
 from torch_geometric.data import DataLoader
 
 #The path to structure graphs of data need to be predicted
-processed_dir = "/home/til60/Desktop/Protein_stability/CD4_J3_alpha/processed_GVP2"
+processed_dir = "../../predict/processed"
 #The npy file of unseen mutation data
-npy_file = "/home/til60/Desktop/Protein_stability/HuJ3/zy_multiple_HuJ3.npy"
+npy_file = "../../predict/zy_HuJ3v1"
 
 #Create dataset for unseen data
 class Predict_Dataset(Dataset_n):
@@ -42,7 +42,7 @@ model = StaGVP((91, 3), (int(2*91), int(1*3)), (32, 1), (32, 1), 0.4) #These par
 model.to(device)
 
 def make_prediction(model, predloader):
-   model.load_state_dict(torch.load(f"../../LTJ_features/fine/GVPm71.pth"))
+   model.load_state_dict(torch.load(f"../../model/GVPm71.pth"))
    model.eval()
    predictions = []
    with torch.no_grad():
