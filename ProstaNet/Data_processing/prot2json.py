@@ -10,9 +10,9 @@ ressymbl = {'ALA': 'A', 'CYS': 'C', 'ASP': 'D', 'GLU':'E', 'PHE': 'F', 'GLY': 'G
 class prot2json():
     def __init__(self, root):
         self.root = root
-        self.raw_paths = os.path.join(self.root, 'Extra_alpha_mutated')
+        self.raw_paths = os.path.join(self.root, 'mutant')
         self.json_paths = os.path.join(self.root, 'json_path')
-        self.fasta_paths = os.path.join(self.root, 'fasta4')
+        self.fasta_paths = os.path.join(self.root, 'fasta')
     
     def process(self):
         total_coord = []
@@ -74,5 +74,5 @@ class prot2json():
         return output
 
 if __name__ == '__main__':
-    prot_json = prot2json('../LTJ_features')
+    prot_json = prot2json('../Data_example')
     prot_json.process()
