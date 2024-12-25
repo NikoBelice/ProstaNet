@@ -15,13 +15,13 @@ d1 = datetime.datetime.now()
 use_multiprocessing = True
 if use_multiprocessing:
     import multiprocessing
-    max_cpus = 40
+    max_cpus = 8
 
 #Using Rosetta relax to relax the wild-type proteins
 def wild_relax(start_struct, pdb_chain):
     rosetta_relax_script_path = os.path.expanduser('./relax.mpi.linuxgccrelease')
-    output_directory = os.path.expanduser('./Multiple_alpha/multiple')
-    input_pdb_path = os.path.expanduser('./Multiple_alpha')
+    output_directory = os.path.expanduser('../../Data_example/mutant')
+    input_pdb_path = os.path.expanduser('../../Data_example/raw')
     start_struct_path = os.path.join(input_pdb_path, start_struct)
 
 #The parameters of Rosetta relax   
@@ -51,7 +51,7 @@ def wild_relax(start_struct, pdb_chain):
 if __name__=='__main__':
 
     case = []
-    input_pdb_path = os.path.expanduser('./Multiple_alpha')
+    input_pdb_path = os.path.expanduser('../../Data_example/raw')
 
     for start_struct in os.listdir(input_pdb_path):
         pdb_chain = os.path.splitext(start_struct)[0]
