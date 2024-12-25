@@ -9,7 +9,7 @@ from sklearn.model_selection import KFold
 
 
 #The folder that stores data graph
-processed_dir = "../../LTJ_features/processed_GVP4/"
+processed_dir = "../../Data_example/processed/"
 
 #training data list 
 npy_file = "../../Datasets/Multiple_training_cluster.npy"
