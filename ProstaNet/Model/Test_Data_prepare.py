@@ -8,7 +8,7 @@ from torch_geometric.data import DataLoader
 
 
 #The folder that stores data graph
-processed_dir = "../../LTJ_features/processed_GVP4/"
+processed_dir = "../../Data_example/processed/"
 
 #Testing data list, you can change the data list you want to use
 npy_file = "../../Datasets/Ssym_testing.npy"
