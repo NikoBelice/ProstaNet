@@ -22,7 +22,7 @@ class prot2json():
             output = self._get_coord(file_path)
             self._get_fasta(file_path)
             total_coord.append(output)
-        outfile = os.path.join(self.json_paths, 'structures_listv4.json')
+        outfile = os.path.join(self.json_paths, 'structures_list.json')
         json.dump(total_coord, open(outfile, "w"))
 
 #Generate fasta of each protein, which for getting pssm files
@@ -74,5 +74,5 @@ class prot2json():
         return output
 
 if __name__ == '__main__':
-    prot_json = prot2json('../Data_example')
+    prot_json = prot2json('../../Data_example')
     prot_json.process()
