@@ -130,7 +130,7 @@ class json2graph():
     def __init__(self, root):
         self.root = root
         self.raw_path = os.path.join(self.root, 'json_path')
-        self.processed_paths = os.path.join(self.root, 'Extra_alpha_mutated')
+        self.processed_paths = os.path.join(self.root, 'processed_graph')
 
     def process(self, datalist):
         with open(datalist) as f:
@@ -138,8 +138,8 @@ class json2graph():
             for i in data:
                 name = i['name']
                 print(name)
-                pdb = os.path.join('../../Data_example/raw', f"{name}.pdb")
-                pssm_file = os.path.join('/home/til60/Desktop/Blast/blast_result', f"{name}.pssm")
+                pdb = os.path.join('../../Data_example/mutant', f"{name}.pdb")
+                pssm_file = os.path.join('../../Data_example/blast_result', f"{name}.pssm")
                 with torch.no_grad():
                     coords = torch.as_tensor(i['coord'],device="cpu", dtype=torch.float32)
 
