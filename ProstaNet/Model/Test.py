@@ -26,7 +26,7 @@ test_pred = []
 
 
 for i in range(1, 6):
-    model.load_state_dict(torch.load(f"../../LTJ_features/tem/GVPm1{i}.pth"))
+    model.load_state_dict(torch.load(f"../../model/GVPs1{i}.pth"))
     model.to(device)
     model.eval()
     predictions = torch.Tensor()
