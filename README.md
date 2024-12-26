@@ -35,6 +35,9 @@ conda env create --file environment.yml
 - Download UniRef90 database from https://www.uniprot.org/help/downloads
 - Run ```ProstaNet\Data_processing\psiblast.py```
 
+## Example
+- You can use the data in ```Data_example``` and run ```Train_GVP.py``` to go through data processing and training process
+
 ### Database available
 FireProtDB: https://loschmidt.chemi.muni.cz/fireprotdb/
 
