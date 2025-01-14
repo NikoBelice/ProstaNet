@@ -42,7 +42,7 @@ model = StaGVP((91, 3), (45, 6), (32, 1), (32, 1), 0.2) #These parameters should
 model.to(device)
 
 def make_prediction(model, predloader):
-   model.load_state_dict(torch.load(f"../../model/GVPm71.pth"))
+   model.load_state_dict(torch.load(f"../../Model/GVP_single_best.pth"))
    model.eval()
    predictions = []
    with torch.no_grad():
