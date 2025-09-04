@@ -281,6 +281,7 @@ class json2graph():
     
 if __name__ == '__main__':
 
-    datalist = '../../Data_example/json_path/structures_list.json'
+    datalist = '../../Data_example/json_path/example.json'
     json_graphs = json2graph('../../Data_example')
     json_graphs.process(datalist)
+
