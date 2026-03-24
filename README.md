@@ -26,7 +26,7 @@ conda env create --file environment.yml
   You can use your own training set and modify the parameters in the model.
 
 ## Test ProstaNet model
-- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-pint mutations is ```Ssym_testing.npy``` and ```Extra_testing.npy```, for multiple-mutations is ```Multiple_testing_cluster.npy```.
+- Run ```ProstaNet\Model\Test.py``` to test the train models. The default testing set for single-point mutations is ```Ssym_testing.npy``` and ```Extra_testing.npy```, for multiple-mutations is ```Multiple_testing_cluster.npy```.
 
 ## Protein relax and mutate
 - Use the Rosetta command in ```ProstaNet\Data_processing\rosetta_mutate.py``` and ```rosetta_mutate_multiple.py``` to generate protein variants. Wild-type protein uses ```rosetta_relax.py``` to relax.
